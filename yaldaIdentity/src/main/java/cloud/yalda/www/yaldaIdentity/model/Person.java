@@ -33,10 +33,7 @@ public class Person implements Serializable {
     private String photoUri;
     @Column(length = 500,columnDefinition = "varchar(500)")
     private String fcm;
-    @Column(length = 500,columnDefinition = "varchar(500)")
-    private String token;
-    @Column(length = 500,columnDefinition = "varchar(500)")
-    private String refreshToken;
+
 
 @OneToMany(cascade = CascadeType.PERSIST,targetEntity = PersonPhoto.class,mappedBy = "personId")
     private Set<PersonPhoto> personPhotoSet;
